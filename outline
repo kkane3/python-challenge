@@ -1,0 +1,18 @@
+
+
+#Read budget_data.csv
+
+
+
+# Count number of months
+
+
+#Calculate Net Profits/Losses
+
+
+#Calculate Avg of changes for Profits/Losses
+
+
+#Find greatest increase in profits; Return Date and Amount
+
+#Find greatest decrease in losses; Return Date and Amount
