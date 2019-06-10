@@ -2,27 +2,44 @@
 import csv
 import os
 
+#define file paths
 
-#Define input and output files
+budget_csv = os.path.join('.','budget_data.csv')
 
-#budget_input = os.path.join('.', 'budget_data.csv')
-#budget_output = "budget_output.csv"
+#define variables
 
-#Read csv data
-with open('budget_data.csv', newline='') as csvfile:
-    budgetData = csv.reader(csvfile, delimiter=",")
-    print(budgetData)
+month_data = []
+rev_data = []
+change_data = []
+
+#open csv and read to budget_data list, calculate monthly change write to list change_data
+
+with open(budget_csv, newline='') as csvfile:
+	csvreader = csv.reader(csvfile, delimiter=",")
+	header = next(csvreader)
+	
+	for row in csvreader:
+		month_data.append(row[0])
+		rev_data.append(int(row[0]))
+
+#calculate change of profits month to month
+
+#month_change = 0
+#for row  in rev_data:
+#	month_change = rev_data[0] - month_change
+#	change_data.append(int(row[0]))
+	
+		
+
+#Output
+#totalmonths = len(month_data)
+#totalprofit = sum(rev_data)
+#print(totalmonths)
+print(rev_data)	
+#print(sum(rev_data))
 
 
 
 
-#skip header row; count numnber of rows; assign to TotalMonths
-# Count number of months
-#next(BudgetData)
-#for i in BudgetData
-    
 
-#Calculate Net Profits/Losses
-#Calculate Avg of changes for Profits/Losses
-#Find greatest increase in profits; Return Date and Amount
-#Find greatest decrease in losses; Return Date and Amount
+
